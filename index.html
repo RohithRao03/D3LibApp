@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>D3 Visualization</title>
+		<link  rel="stylesheet" href="bootstrap/css/bootstrap.min.css"></link>
+	   	<script src="bootstrap/js/bootstrap.min.js"></script>
+       	<link rel="stylesheet"  href="css/Styles.css">
+        <script type="text/javascript" src="d3/d3.v3.js">        
+        </script>
+		
+    </head>
+    <body>
+		
+			
+			<div id="full-page">
+				<nav class="navbar fixed-top navbar-light bg-light">
+					<div class="container-fluid">
+						
+						<form class="container-fluid justify-content-start">
+							<span class="navbar-text lead">London Cholera Map 1854 - D3 Visualization | scroll to zoom , hold to pan (MAP)</span>
+							<!-- <button id="btn1" class="btn btn-sm btn-primary" type="button"   >View Grids</button> -->
+							<!-- <button id="btn2" class="btn btn-sm btn-primary" type="button" >Show Deaths</button> -->
+							<button class="btn btn-sm btn-secondary" type="button" onclick ="window.open('http://www.facebook.com/','facebook')"   >Documentation</button>
+							<button class="btn btn-sm btn-warning" type="button" onclick ="window.open('https://www.youtube.com/','youtube')" data-bs-toggle="modal" data-bs-target="#video">Video</button>		
+							
+						</form>
+						
+					</div>
+					
+				</nav>
+				
+				<div id="body">
+				<div id="main"  class ="main">
+					
+					<div id="main_map" class ="main_map">
+						
+						<!-- <div class="modal fade" id="video" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+							<div class="modal-dialog">
+							  <div class="modal-content">
+								<div class="modal-header">
+								  <h5 class="modal-title" id="staticBackdropLabel">Video</h5>
+								  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<iframe width="470" height="300" src="https://www.youtube.com/embed/fcZXfoB2f70?controls=0" frameborder="0" allowfullscreen></iframe>
+								</div>
+								
+							  </div>
+							</div>
+						  </div> -->
+						
+						  
+						  <!-- Modal -->
+						  <!-- <div class="modal fade" id="popupDialog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+							<div class="modal-dialog">
+							  <div class="modal-content">
+								<div class="modal-header">
+								  <h5 class="modal-title" id="staticBackdropLabel">Add grids</h5>
+								  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<form action="dialog">
+								<div class="modal-body" >
+									<select id="val" class="form-select">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+									</select>
+								</div>
+								<div class="modal-footer">
+								  <button type="button" class="btn btn-sm btn-warning" data-bs-dismiss="modal">Cancel</button>
+								  <button id="okBtn" type="button" class="btn btn-sm btn-primary" data-bs-dismiss="modal">Confirm</button>
+								</div>
+								</form>
+							  </div>
+							</div>
+						  </div> -->
+	
+	
+						
+						  <div style="margin-top: 40px !important;" ></div>
+						<div class="slidecontainer" style="display: none;" >
+							<div class="sliderlabels">	<label id ="llabel" for="left">19-Aug</label></div>
+							<div class="slidermain">
+								<div class="slider" style="display: none;">
+									<div class="progress"></div>
+								</div>
+							
+								<div class="sliderinput">
+									<input id ="left" type="range" class="left" min="0" max="41" value="0" step="1">
+									<input id = "right" type="range" class="right" min="0" max="41" value="41" step="1">
+								</div>
+							</div>
+							<div class="sliderlabels">	<label id ="rlabel" for="right">29-Sept</label></div>
+						</div>
+						<svg id="g" width="600" height="500" class="border border-dark drop-lg" style="margin-left: 20px;"></svg>
+					</div>
+					<div style="margin-top: 40px !important;" ></div>
+					<div id="main_bar" class ="main_bar">
+					
+					</div>
+					
+				</div>
+				<div id="foot" class="foot drop">
+					<div id="foot_toatlpie" class="foot_toatlpie">
+					<!-- <svg id="svgcensus"></svg> -->
+					<svg id="svgtotal"></svg>
+					<svg id="legend_svg"></svg>
+					</div>
+					<div id="foot_MFpie" class="foot_MFpie"></div>
+				</div>
+				</div>
+			   </div>
+		
+			
+        <script src="js/index.js"></script>
+		
+    </body>
+</html>
